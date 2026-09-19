@@ -1,16 +1,14 @@
 {
-  "version": 2,
-  "routes": [
-    { "src": "/executor-health", "dest": "/executor-health.html" },
-    { "src": "/downloads",       "dest": "/downloads.html" },
-    { "src": "/changelog",       "dest": "/changelog.html" },
-    { "src": "/scripts",         "dest": "/scripts.html" },
-    { "src": "/scripts/(.*)",    "dest": "/scripts.html" },
-    { "src": "/login",           "dest": "/login.html" },
-    { "src": "/dashboard",       "dest": "/dashboard.html" },
-    { "src": "/admin",           "dest": "/admin.html" },
-    { "src": "/tos",             "dest": "/tos.html" },
-    { "src": "/privacy",         "dest": "/privacy.html" },
-    { "src": "/dmca",            "dest": "/dmca.html" }
+  "rewrites": [
+    { "source": "/executor-health", "destination": "/executor-health.html" },
+    { "source": "/downloads",       "destination": "/downloads.html" },
+    { "source": "/changelog",       "destination": "/changelog.html" },
+    { "source": "/scripts",         "destination": "/scripts.html" },
+    { "source": "/login",           "destination": "/login.html" },
+    { "source": "/dashboard",       "destination": "/dashboard.html" },
+    { "source": "/admin",           "destination": "/admin.html" },
+    { "source": "/tos",             "destination": "/tos.html" },
+    { "source": "/privacy",         "destination": "/privacy.html" },
+    { "source": "/dmca",            "destination": "/dmca.html" }
   ]
 }
