@@ -1,9 +1,9 @@
 {
   "name": "veil-executor-site",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "private": true,
   "type": "module",
   "dependencies": {
-    "@vercel/kv": "^3.0.0"
+    "@supabase/supabase-js": "^2.45.0"
   }
 }
