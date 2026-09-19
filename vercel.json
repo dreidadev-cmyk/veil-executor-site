@@ -2,14 +2,15 @@
   "version": 2,
   "routes": [
     { "src": "/executor-health", "dest": "/executor-health.html" },
-    { "src": "/downloads", "dest": "/downloads.html" },
-    { "src": "/changelog", "dest": "/changelog.html" },
-    { "src": "/scripts", "dest": "/scripts.html" },
-    { "src": "/scripts/(.*)", "dest": "/scripts.html" },
-    { "src": "/login", "dest": "/login.html" },
-    { "src": "/dashboard", "dest": "/dashboard.html" },
-    { "src": "/tos", "dest": "/tos.html" },
-    { "src": "/privacy", "dest": "/privacy.html" },
-    { "src": "/dmca", "dest": "/dmca.html" }
+    { "src": "/downloads",       "dest": "/downloads.html" },
+    { "src": "/changelog",       "dest": "/changelog.html" },
+    { "src": "/scripts",         "dest": "/scripts.html" },
+    { "src": "/scripts/(.*)",    "dest": "/scripts.html" },
+    { "src": "/login",           "dest": "/login.html" },
+    { "src": "/dashboard",       "dest": "/dashboard.html" },
+    { "src": "/admin",           "dest": "/admin.html" },
+    { "src": "/tos",             "dest": "/tos.html" },
+    { "src": "/privacy",         "dest": "/privacy.html" },
+    { "src": "/dmca",            "dest": "/dmca.html" }
   ]
 }
