@@ -1,8 +1,17 @@
 'use strict';
-// Reads releases from a JSON file. In production, move to Vercel KV.
-import releases from '../../data/releases.json' with { type: 'json' };
+import { db, TABLES } from '../_utils/db.js';
 
-export default function handler(req, res) {
+export default async function handler(req, res) {
+  const { data, error } = await db
+    .from(TABLES.RELEASES)
+    .select('*')
+    .order('released_at', { ascending: false });
+
+  if (error) {
+    res.setHeader('Cache-Control', 'no-store');
+    return res.status(500).json({ error: 'db error', detail: error.message });
+  }
+
   res.setHeader('Cache-Control', 'public, max-age=60');
-  res.json({ releases });
+  res.json({ releases: data || [] });
 }
