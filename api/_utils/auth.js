@@ -1,6 +1,6 @@
 'use strict';
 import crypto from 'crypto';
-import { db, TABLES } from './db.js';
+import { db, TABLES, DB_READY } from './db.js';
 
 const ADMIN_IDS = (process.env.ADMIN_IDS || '')
   .split(',')
@@ -47,4 +47,4 @@ export function requireAdmin(req, res) {
   return user;
 }
 
-export { db, TABLES };
+export { db, TABLES, DB_READY };
