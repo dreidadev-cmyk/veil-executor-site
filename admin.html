@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin — Veil Executor</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="admin.css" />
+</head>
+<body>
+  <div class="bg-grid"></div><div class="bg-glow"></div>
+
+  <header class="nav">
+    <a href="index.html" class="logo">
+      <span class="logo-mark">V</span>
+      <span class="logo-text">VEIL<span class="accent">EXECUTOR</span></span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="admin.html" class="active">Admin</a>
+      <a href="#" id="nav-auth" class="nav-cta">…</a>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <div id="gate" class="muted">Checking access…</div>
+    <div id="panel" class="hidden">
+      <h1 class="section-title">Admin Panel</h1>
+      <p class="section-sub">Manage submissions, publish releases, monitor activity.</p>
+
+      <div class="admin-tabs">
+        <button class="tab active" data-tab="scripts">Pending Scripts</button>
+        <button class="tab" data-tab="releases">Releases</button>
+        <button class="tab" data-tab="stats">Stats</button>
+      </div>
+
+      <section id="tab-scripts" class="tab-panel">
+        <div id="pending-list" class="admin-list"></div>
+      </section>
+
+      <section id="tab-releases" class="tab-panel hidden">
+        <div class="card mb-3">
+          <h3 class="mb-2">Publish new release</h3>
+          <div class="form-grid">
+            <input class="input" id="rel-version" placeholder="Version (e.g. 1.0.1)" />
+            <select class="input" id="rel-channel">
+              <option value="stable">stable</option>
+              <option value="beta">beta</option>
+              <option value="nightly">nightly</option>
+            </select>
+            <input class="input" id="rel-platforms" placeholder="Platforms — e.g. Android 8.0+, iOS 14+" />
+            <input class="input" id="rel-size" placeholder="Size in bytes (optional)" />
+            <input class="input" id="rel-sha" placeholder="SHA-256 hash" />
+            <input class="input" id="rel-url" placeholder="Download URL" />
+            <input class="input" id="rel-label" placeholder="File label (e.g. Download APK)" />
+          </div>
+          <textarea class="textarea mt-2" id="rel-changelog" placeholder="Changelog (one bullet per line, prefix with section:New / section:Fix / section:Improve / section:Break)"></textarea>
+          <button class="btn btn-primary mt-2" id="publish-btn">Publish</button>
+          <div id="publish-status" class="mt-2 muted" style="font-size:13px"></div>
+        </div>
+
+        <div id="release-list" class="admin-list"></div>
+      </section>
+
+      <section id="tab-stats" class="tab-panel hidden">
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-num" id="stat-pending">—</div>
+            <div class="stat-lbl">Pending Scripts</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num" id="stat-total">—</div>
+            <div class="stat-lbl">Total Releases</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num" id="stat-latest">—</div>
+            <div class="stat-lbl">Latest Version</div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2026 Veil Executor.</p>
+  </footer>
+
+  <script type="module" src="admin.js"></script>
+</body>
+</html>
