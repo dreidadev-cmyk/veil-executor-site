@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Script Hub — Veil Executor</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="scripts.css" />
+</head>
+<body>
+  <div class="bg-grid"></div><div class="bg-glow"></div>
+
+  <header class="nav">
+    <a href="index.html" class="logo">
+      <span class="logo-mark">V</span>
+      <span class="logo-text">VEIL<span class="accent">EXECUTOR</span></span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="downloads.html">Download</a>
+      <a href="scripts.html" class="active">Scripts</a>
+      <a href="changelog.html">Changelog</a>
+      <a href="executor-health.html">Status</a>
+      <a href="login.html" class="nav-cta" id="nav-auth">Login</a>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <div class="row-between mb-3" style="flex-wrap:wrap;gap:12px">
+      <div>
+        <h1 class="section-title">Script Hub</h1>
+        <p class="section-sub" style="margin-bottom:0">Curated scripts, verified by staff. Free to browse.</p>
+      </div>
+      <a href="#" class="btn btn-primary" id="submit-btn">Submit script</a>
+    </div>
+
+    <div class="hub-controls mb-3">
+      <input class="input" id="search" placeholder="Search scripts…" />
+      <select class="input" id="category">
+        <option value="">All categories</option>
+        <option value="mm2">Murder Mystery 2</option>
+        <option value="bloxfruits">Blox Fruits</option>
+        <option value="petsim">Pet Simulator</option>
+        <option value="arsenal">Arsenal</option>
+        <option value="universal">Universal</option>
+        <option value="other">Other</option>
+      </select>
+      <select class="input" id="sort">
+        <option value="recent">Most recent</option>
+        <option value="popular">Most popular</option>
+        <option value="featured">Featured first</option>
+      </select>
+    </div>
+
+    <div id="grid" class="script-grid"></div>
+  </main>
+
+  <footer>
+    <div class="footer-links">
+      <a href="tos.html">Terms of Service</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="dmca.html">DMCA</a>
+    </div>
+    <p>© 2026 Veil Executor.</p>
+  </footer>
+
+  <script type="module" src="scripts.js"></script>
+</body>
+</html>

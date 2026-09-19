@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Download — Veil Executor</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="download.css" />
+</head>
+<body>
+  <div class="bg-grid"></div><div class="bg-glow"></div>
+
+  <header class="nav">
+    <a href="index.html" class="logo">
+      <span class="logo-mark">V</span>
+      <span class="logo-text">VEIL<span class="accent">EXECUTOR</span></span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="downloads.html" class="active">Download</a>
+      <a href="scripts.html">Scripts</a>
+      <a href="changelog.html">Changelog</a>
+      <a href="executor-health.html">Status</a>
+      <a href="login.html" class="nav-cta" id="nav-auth">Login</a>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <h1 class="section-title">Download Veil Executor</h1>
+    <p class="section-sub">No login required. No key system. Free forever.</p>
+
+    <div id="latest-release" class="release-hero">
+      <div class="skeleton-block">Loading latest release…</div>
+    </div>
+
+    <h2 class="section-title mt-3" style="font-size:22px">Version history</h2>
+    <div id="release-list" class="release-list"></div>
+
+    <div class="verify-card mt-3">
+      <h3 class="mb-1">Verify your download</h3>
+      <p class="muted mb-2">Compare the SHA-256 of your downloaded file with the official hash below.</p>
+      <div class="verify-grid">
+        <input class="input" id="verify-hash" placeholder="Paste file hash (SHA-256)" />
+        <select class="input" id="verify-version"></select>
+        <button class="btn btn-primary" id="verify-btn">Verify</button>
+      </div>
+      <div id="verify-result" class="mt-2"></div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-links">
+      <a href="tos.html">Terms of Service</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="dmca.html">DMCA</a>
+      <a href="executor-health.html">Status</a>
+    </div>
+    <p>© 2026 Veil Executor. Not affiliated with Roblox Corporation.</p>
+    <p class="footer-note">For educational and research purposes only.</p>
+  </footer>
+
+  <script type="module" src="download.js"></script>
+</body>
+</html>

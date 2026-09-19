@@ -1,0 +1,13 @@
+[
+  {
+    "version": "1.0.0",
+    "channel": "stable",
+    "releasedAt": "2026-01-15T00:00:00Z",
+    "platforms": ["Android 8.0+"],
+    "size": 44040192,
+    "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+    "files": [
+      { "label": "Download APK", "url": "/downloads/veil-executor-v1.0.0.apk" }
+    ]
+  }
+]

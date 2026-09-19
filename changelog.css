@@ -1,0 +1,38 @@
+.cl-list { display: flex; flex-direction: column; gap: 18px; }
+.cl-item {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 24px;
+}
+.cl-head {
+  display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap;
+  margin-bottom: 14px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+}
+.cl-ver { font-size: 20px; font-weight: 700; }
+.cl-date { color: var(--muted); font-size: 13px; font-family: var(--mono); }
+.cl-tag {
+  display: inline-block; padding: 2px 8px; border-radius: 100px;
+  font-size: 10px; font-weight: 700; letter-spacing: 0.06em;
+  text-transform: uppercase; font-family: var(--mono);
+}
+.cl-tag.new  { background: var(--yellow-dim); color: var(--yellow); }
+.cl-tag.fix  { background: rgba(60,220,120,.15); color: var(--green); }
+.cl-tag.improve { background: rgba(100,150,255,.15); color: #7aa7ff; }
+.cl-tag.break { background: rgba(255,60,60,.15); color: var(--red); }
+
+.cl-section { margin-bottom: 12px; }
+.cl-section h4 {
+  font-size: 13px; margin-bottom: 8px;
+  text-transform: uppercase; letter-spacing: 0.08em;
+  color: var(--muted); font-weight: 600;
+}
+.cl-section ul { list-style: none; padding-left: 0; }
+.cl-section li {
+  position: relative; padding-left: 20px;
+  margin-bottom: 6px; font-size: 14px; line-height: 1.6;
+}
+.cl-section li::before {
+  content: '▸'; position: absolute; left: 0;
+  color: var(--yellow);
+}

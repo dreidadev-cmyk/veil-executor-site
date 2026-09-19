@@ -1,0 +1,15 @@
+[
+  {
+    "version": "1.0.0",
+    "releasedAt": "2026-01-15T00:00:00Z",
+    "channel": "stable",
+    "new": [
+      "Initial release of Veil Executor",
+      "Fast injection engine",
+      "Built-in script hub"
+    ],
+    "improve": [],
+    "fix": [],
+    "break": []
+  }
+]
